@@ -1,6 +1,18 @@
+import React, { useState } from'react';
 import './App.css';
 
 function App() {
+  // Stany przechowujące dane formularza
+  const [tytul, setTytul] = useState("");
+  const [rodzaj, setRodzaj] = useState("");
+  
+  // Funkcja obsługująca przycisk "Dodaj"
+  const handSubmit = (e) => {
+    e.preventDefault(); // Zapobiega odświeżaniu strony po kliknięciu
+
+    // Wyświetlanie danych formularza w konsoli
+    console.log(`Tytul: ${tytul}, Rodzaj: ${rodzaj}`);
+  };
   return (
     <div className="App">
       <form>
